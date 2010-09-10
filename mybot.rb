@@ -37,7 +37,7 @@ end
 
 map_data = ''
 loop do
-  current_line = gets.strip
+  current_line = gets.strip rescue break
   if current_line.length >= 2 and current_line[0..1] == "go"
     pw = PlanetWars.new(map_data)
     do_turn(pw)
