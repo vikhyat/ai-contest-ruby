@@ -92,6 +92,10 @@ class PlanetWars
     return Math::hypot( (source.x - destination.x), (source.y - destination.y) )
   end
 
+  def travel_time(source, destination)
+    distance(source, destination).ceil
+  end
+
   def issue_order(source, destination, num_ships)
     puts "#{source} #{destination} #{num_ships}"
     STDOUT.flush
