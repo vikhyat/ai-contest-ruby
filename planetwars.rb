@@ -91,7 +91,7 @@ class PlanetWars
   def distance(source_id, destination_id)
     source = get_planet(source_id)
     destination = get_planet(destination_id)
-    return Math::sqrt( (source.x - destination.x)**2 + (source.y - destination.y)**2 )
+    return Math::hypot( (source.x - destination.x), (source.y - destination.y) )
   end
 
   def issue_order(source, destination, num_ships)
