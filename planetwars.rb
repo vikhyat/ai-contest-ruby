@@ -89,7 +89,7 @@ class PlanetWars
   end
 
   def distance(source, destination)
-    return Math::hypot( (source.x - destination.x), (source.y - destination.y) )
+    Math::hypot( (source.x - destination.x), (source.y - destination.y) )
   end
 
   def travel_time(source, destination)
@@ -102,13 +102,7 @@ class PlanetWars
   end
 
   def is_alive(player_id)
-    if (@planets.select{|p| p.owner == player_id }).length > 0
-      return true
-    elsif (@fleets.select{|p| p.owner == player_id }).length > 0
-      return true
-    else
-      return false
-    end
+    ((@planets.select{|p| p.owner == player_id }).length > 0) || ((@fleets.select{|p| p.owner == player_id }).length > 0)
   end
 
   def parse_game_state(s)
