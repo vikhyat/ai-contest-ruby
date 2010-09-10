@@ -112,7 +112,6 @@ class PlanetWars
     planet_id = 0
 
     lines.each do |line|
-      p line
       line = line.split("#")[0]
       tokens = line.split(" ")
       next if tokens.length == 1
