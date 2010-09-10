@@ -88,9 +88,7 @@ class PlanetWars
     return s.join("\n")
   end
 
-  def distance(source_id, destination_id)
-    source = get_planet(source_id)
-    destination = get_planet(destination_id)
+  def distance(source, destination)
     return Math::hypot( (source.x - destination.x), (source.y - destination.y) )
   end
 
